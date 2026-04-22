@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arafath Hossen Santo — Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Particle canvas background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav id="nav" class="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>arafath<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">about</a>
+      <a href="#skills" class="nav-link">skills</a>
+      <a href="#projects" class="nav-link">projects</a>
+      <a href="#contact" class="nav-link">contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">about</a>
+    <a href="#skills" class="mobile-link">skills</a>
+    <a href="#projects" class="mobile-link">projects</a>
+    <a href="#contact" class="mobile-link">contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-greeting">
+        <span class="typing-prefix">&gt;&nbsp;</span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line">Arafath</span>
+        <span class="name-line accent">Hossen Santo</span>
+      </h1>
+      <p class="hero-tagline">Computer Science &amp; Engineering · AIUB</p>
+      <p class="hero-sub">Full-stack developer · Competitive programmer · AI enthusiast</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Explore Work</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-label">&lt;about&gt;</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Building digital<br /><span class="accent">experiences</span></h2>
+          <p>
+            I'm Arafath Hossen Santo, a Computer Science &amp; Engineering student at
+            <strong>American International University-Bangladesh (AIUB)</strong>.
+            I love turning complex problems into elegant, user-friendly software solutions.
+          </p>
+          <p>
+            From crafting responsive web apps to solving algorithmic challenges on Codeforces,
+            I thrive at the intersection of creativity and logic. My journey spans full-stack
+            web development, computer graphics, artificial intelligence, and competitive programming.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card" data-count="18">
+            <span class="stat-number">0</span>
+            <span class="stat-label">GitHub Repos</span>
+          </div>
+          <div class="stat-card" data-count="7">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat-card" data-count="5">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Frameworks</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-label closing">&lt;/about&gt;</div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-label">&lt;skills&gt;</div>
+      <h2 class="section-title">Tech <span class="accent">arsenal</span></h2>
+      <div class="skills-orbit" id="skillsOrbit">
+        <!-- Center node -->
+        <div class="orbit-center">
+          <span>Core</span>
+        </div>
+        <!-- Skill nodes generated via JS -->
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><span class="cat-icon">&#9672;</span> Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PHP</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><span class="cat-icon">&#9672;</span> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><span class="cat-icon">&#9672;</span> Backend &amp; Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ASP.NET</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">PHP / Laravel</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><span class="cat-icon">&#9672;</span> Domains</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AI / ML</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Computer Graphics</span>
+            <span class="skill-tag">Competitive Programming</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-label closing">&lt;/skills&gt;</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-label">&lt;projects&gt;</div>
+      <h2 class="section-title">Featured <span class="accent">work</span></h2>
+      <div class="projects-masonry">
+
+        <article class="project-card featured">
+          <div class="project-number">01</div>
+          <h3 class="project-title">Investor Seeker Platform</h3>
+          <p class="project-desc">A web platform connecting entrepreneurs with investors, built with PHP to facilitate the startup ecosystem.</p>
+          <div class="project-tech">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>HTML/CSS</span>
+          </div>
+          <a href="https://github.com/santo-arafath/Investor-Seeker-Project" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <h3 class="project-title">Weather Dashboard</h3>
+          <p class="project-desc">Real-time weather application built with Angular, featuring interactive UI and live weather data integration.</p>
+          <div class="project-tech">
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>API</span>
+          </div>
+          <a href="https://github.com/arafath-BS/Weather-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">03</div>
+          <h3 class="project-title">SnapShop v2</h3>
+          <p class="project-desc">Modern e-commerce application built with TypeScript, delivering a fast and responsive shopping experience.</p>
+          <div class="project-tech">
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>E-Commerce</span>
+          </div>
+          <a href="https://github.com/santo-arafath/snapshopv2" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">04</div>
+          <h3 class="project-title">WEPUP Communication Platform</h3>
+          <p class="project-desc">An online communication platform for university students, enabling seamless collaboration and information sharing.</p>
+          <div class="project-tech">
+            <span>Java</span>
+            <span>Networking</span>
+          </div>
+          <a href="https://github.com/santo-arafath/online-communication-platform" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">05</div>
+          <h3 class="project-title">New York City — 3D Graphics</h3>
+          <p class="project-desc">A computer graphics project that renders a live 3D view of New York City using OpenGL and C++.</p>
+          <div class="project-tech">
+            <span>C++</span>
+            <span>OpenGL</span>
+            <span>Graphics</span>
+          </div>
+          <a href="https://github.com/santo-arafath/New-Work-City-Computer-Graphics-Project" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">06</div>
+          <h3 class="project-title">Online Phone Store</h3>
+          <p class="project-desc">A full-featured online phone store application built with C# and .NET, supporting product management and transactions.</p>
+          <div class="project-tech">
+            <span>C#</span>
+            <span>.NET</span>
+          </div>
+          <a href="https://github.com/santo-arafath/online-phone-store-" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">07</div>
+          <h3 class="project-title">AI Algorithms in Python</h3>
+          <p class="project-desc">Implementations of core artificial intelligence algorithms including search, optimization, and machine learning techniques.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Jupyter</span>
+            <span>AI/ML</span>
+          </div>
+          <a href="https://github.com/santo-arafath/Artificial-Inteligent-python" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">08</div>
+          <h3 class="project-title">Computer Vision &amp; Pattern Recognition</h3>
+          <p class="project-desc">Exploring computer vision techniques including image classification, object detection, and pattern recognition using deep learning.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Jupyter</span>
+            <span>CV/DL</span>
+          </div>
+          <a href="https://github.com/santo-arafath/CVPR" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+      </div>
+      <div class="section-label closing">&lt;/projects&gt;</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-label">&lt;contact&gt;</div>
+      <h2 class="section-title">Let's <span class="accent">connect</span></h2>
+      <p class="contact-intro">Got a project idea, collaboration proposal, or just want to say hello? I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:arafath.hossen.santo97193@gmail.com" class="contact-card">
+          <div class="contact-icon">✉</div>
+          <div class="contact-info">
+            <span class="contact-type">Email</span>
+            <span class="contact-value">arafath.hossen.santo97193@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/santo-arafath" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">⟐</div>
+          <div class="contact-info">
+            <span class="contact-type">GitHub</span>
+            <span class="contact-value">santo-arafath</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/arafath-hossen-santo-ba722522b/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">◈</div>
+          <div class="contact-info">
+            <span class="contact-type">LinkedIn</span>
+            <span class="contact-value">Arafath Hossen Santo</span>
+          </div>
+        </a>
+        <a href="https://codeforces.com/profile/arafathsanto" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">⟡</div>
+          <div class="contact-info">
+            <span class="contact-type">Codeforces</span>
+            <span class="contact-value">arafathsanto</span>
+          </div>
+        </a>
+      </div>
+      <div class="section-label closing">&lt;/contact&gt;</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Arafath Hossen Santo. Crafted with code and curiosity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
